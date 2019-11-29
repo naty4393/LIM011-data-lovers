@@ -146,11 +146,11 @@ HISTORIA 3 .- Yo como usuario quiero poder filtrar todo lo campiones de un deter
 
 #### Prototipo de baja fidelidad
 
-![IMAGEN](/scr/img/imagen1)
+![IMAGEN](/scr/img/imagen1.jpeg)
 
 #### Prototipo de alta fidelidad
 
-![IMAGEN](/scr/img/imagen1)
+![IMAGEN](/scr/img/imagen1.jpeg)
 
 #### Testeos de usabilidad
 
