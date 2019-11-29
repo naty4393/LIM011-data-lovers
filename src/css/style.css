@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif|Calistoga|Open+Sans|Trade+Winds&display=swap" rel="stylesheet');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hidden {
+    display: none;
+}
+
+header {
+    width: 100%;
+    height: 150px;
+    justify-content: center;
+    color: rgb(206, 156, 21);
+    position: fixed;
+    /* outline: 1px solid ivory; */
+    position: absolute;
+}
+
+.contenedor-menu {
+    position: fixed;
+}
+
+.encabezado {
+    display: block;
+    margin: auto;
+    width: 18rem;
+    height: auto;
+    /* outline: 1px solid ivory; */
+}
+
+body {
+    font-family: 'Trade Winds', cursive;
+    background-color: black;
+    background-image: url(../img/fondo2.jpg);
+    background-size: 2000px;
+    background-repeat: repeat-y;
+    /* outline: 1px solid ivory; */
+}
+
+.body-img {
+    background-image: url(../img/cuerpoCampeones.png);
+    background-repeat: repeat-y;
+    width: 100%;
+    background-size: 100%;
+    position: relative;
+    /*punto absoluto que va a tomar el punto de referencia (relative) al cual se va a mover el punto absoluto*/
+    /* outline: 1px solid ivory; */
+    top: 12rem;
+}
+
+.contenedorRoot {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: absolute;
+    top: 16.5rem;
+}
+
+.contenedor {
+    display: flex;
+    width: 15rem;
+    height: 20rem;
+    background-color: #ffffff;
+    opacity: 0.89;
+    color: #2B4D86;
+    font-size: 2rem;
+    display: inline-block;
+    margin: 53.5px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 0 20px rgb(0, 0, 0);
+    /* overflow: hidden; */
+}
+
+.imagenRoot {
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+}
+
+.section-button {
+    display: block;
+    margin: 1rem;
+    /* display: flex; */
+    /* width: 100%; */
+    text-align: center;
+    align-items: center;
+    /* outline: 1px solid ivory; */
+}
+
+.button {
+    display: inline-block;
+    margin-left: 2.3rem;
+    color: rgb(158, 123, 25);
+    width: 6rem;
+    height: 3rem;
+    /* margin-left: 3.28rem;  */
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Trade Winds', cursive;
+    background: #142423;
+    border: 2px solid rgb(158, 123, 25);
+    /* outline: 1px solid ivory; */
+}
+
+/* -----------------------------------------
+MENU
+----------------------------------------- */
+
+#bar-menu {
+    display: none;
+}
+
+.contenedor-menu label {
+    float: right;
+    font-size: 1.5rem;
+    position: relative;
+    margin: 0.5rem 1rem 0 0;
+}
+
+.contenedor-menu {
+    color: rgb(158, 123, 25);
+    position: relative;
+}
+
+h1 {
+    margin-top: 20px;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    box-shadow: 0 0 80px #000000;
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.menu {
+    position: absolute;
+    top: 250px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 108;
+    text-align: center;
+    background: rgba(51, 51, 51, 0.98);
+    transition: all 0.5s;
+    transform: translateX(-100%);
+}
+
+.menu a {
+    display: block;
+    color: rgb(158, 123, 25);
+    text-decoration: none;
+    padding: 15 px;
+    /* border-bottom: 1.5px solid rgba(211, 192, 26, 0.87); */
+}
+
+.menu a:hover {
+    background: rgba(211, 192, 26, 0.3);
+}
+
+#bar-menu:checked~.menu {
+    transform: translateX(0%);
+}
+
+/*--------------------------------------------------------------
+BUSQUEDA
+----------------------------------------------------------------*/
+
+#search {
+    position: relative;
+    top: 10.5rem;
+}
+
+.bar_menu_search {
+    display: flex;
+    width: 70%;
+    height: 2.5rem;
+    border-radius: 10px;
+    margin: 0 auto 0 auto;
+}
+
+/*---------------------------------------------------------------------
+FOOTER
+----------------------------------------------------------------------*/
+
+footer {
+    display: flex;
+}
+
+/*--------------------------------------------------------------------
+MODAL
+--------------------------------------------------------------------*/
+
+.modal-of-player {
+    width: 70%;
+    height: auto;
+}
+
+.inforModal {
+    background: rgba(250, 248, 248, 0.3);
+}
+
+.miModal {
+    z-index: 1000;
+    position: absolute;
+    color: seashell;
+}
+
+/*--------------------------------------------------------------------
+RESPONSIVE
+--------------------------------------------------------------------*/
+
+@media screen and (min-width: 1024px) {
+    /*----------------------------------------------------
+    CONTENEDOR DE CAMPEONES
+    -----------------------------------------------------*/
+    .encabezado {
+        position: absolute;
+        width: 500px;
+        height: auto;
+        margin: 0 0 0 100px
+    }
+    h1 {
+        position: relative;
+        z-index: -1;
+        top: 80px;
+        padding-left: 350px;
+    }
+    .contenedorRoot {
+        top: 400px;
+    }
+    .contenedor-menu label {
+        display: none;
+    }
+    .imagenRoot {
+        width: 180px;
+        height: 150px;
+    }
+    .contenedor {
+        margin: 150px 20px 45px 20px;
+        width: 250px;
+        height: 285px;
+    }
+    .body-img {
+        top: 400px;
+        z-index: 1;
+    }
+    /*----------------------------------------------------
+    MENÚ
+    -----------------------------------------------------*/
+    .menu {
+        position: static;
+        width: auto;
+        height: 40px;
+        margin: 200px 100px 0 100px;
+        transform: translateX(0%);
+        display: flex;
+        justify-content: center;
+        outline: 5px solid rgb(206, 156, 21);
+    }
+    nav ul>a {
+        line-height: 40px;
+        height: 100%;
+    }
+    nav ul li {
+        list-style: none;
+        margin: 0 40px 0 40px;
+    }
+    .icon {
+        margin: 0 10px 0 10px;
+    }
+    nav ul li:horver {
+        background: rgb(158, 123, 25);
+    }
+    a {
+        margin: 8px 0 8px 0;
+    }
+    /*----------------------------------------------------
+    BUSQUEDA
+    -----------------------------------------------------*/
+    #searchTexto{
+        /* background-image: #f0cd0a url(../img/buscador.png) no-repeat 9px center; */
+        background: #f0cd0a;
+        width: 40px;
+        height: 40px;
+        border-style: none;
+        border-radius: 80%;
+        display: flex;
+        float: right;
+        margin-top: 95px;
+        margin-right: 300px;
+    }   
+    #searchTexto:hover{
+        transition: all 0.5s;
+        transform: translateX(150px);
+        background: rgba(255, 255, 255, 0.90);
+        width: 200px;
+        height: 30px;
+        border-radius: 10px;
+    }
+    /*----------------------------------------------------
+    FILTRADO
+    -----------------------------------------------------*/
+    select {
+        color: seashell;
+        font-family: 'Trade Winds', cursive;
+        width: 200px;
+        height: 40px;
+        z-index: 3800;
+        border: 2px solid rgb(158, 123, 25);
+        background: rgba(51, 51, 51, 0.98);
+    }
+    #filtersTypeofPlayer {
+        position: absolute;
+        margin: 330px 0 0 500px;
+    }
+    #filtersTypeofPlayer>button {
+        margin-left: 60px;
+        font-size: 23px;
+        width: 120px;
+        height: 60px;
+        font-family: 'Trade Winds', cursive;
+        background: rgb(158, 123, 25);
+        outline: 5px solid black;
+    }
+    #filtersTypeofPlayer>button:hover {
+        background: rgb(255, 255, 255, 0.4);
+    }
+    /*----------------------------------------------------
+    FOOTER
+    -----------------------------------------------------*/
+    footer {
+        position: fixed;
+        z-index: 15000;
+        display: flex;
+        font-size: 30px;
+        top: 850px;
+        margin-left: 600px;
+    }
+}

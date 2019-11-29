@@ -1,14 +1,91 @@
 <!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8">
-    <title>Data Lovers</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="main.js"></script>
-  </body>
+<html lang="es" class="html">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Data Lovers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/fontello.css">
+  <script src="https://kit.fontawesome.com/1745da9436.js" crossorigin="anonymous"></script>
+  <!-- rel => relacion del archivo y href: direccion del archivo -->
+</head>
+<body>
+  <header>
+    <img src="img/campeones2.png" class="encabezado">
+    <h1>Elije a tu Campeón...!</h1>
+    <div class="contenedor-menu">
+      <input type="checkbox" name="" id="bar-menu">
+      <label class="icon-menu-outline" for="bar-menu"></label>
+    </div>
+    <nav class="menu">
+      <ul name="list" id="home">
+        <li><a href="#"><i class="icon fas fa-home"></i>Inicio</a></li>
+      </ul>
+      <ul name="list" id="filtered">
+        <li><a href="#filtersTypeofPlayer"><i class="icon fas fa-gavel"></i>Filtrar Campeón</a>
+        </li>
+      </ul>
+      <ul name="list" id="history">
+        <li><a href=""><i class="icon fas fa-dumbbell"></i>Historias</a>
+        </li>
+      </ul>
+      <ul name="list" id="play">
+        <li><a href=""><i class="icon fas fa-user-shield"></i>¿Cómo Jugar?</a>
+        </li>
+      </ul>
+      <ul name="list" id="startPlaying">
+        <li><a href=""><i class="icon icon-gamepad"></i>Jugar LoL</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div class="all-menu">
+    <div id="search">
+      <i class="icon-search"></i><input type="search" id="searchTexto" class="bar_menu_search" placeholder="        Buscar a tu campeón">
+      <div class="section-button">
+        <!-- <input type="button" id="searchButton" value="Buscar" class="button">
+        <input type="button" value="Volver" id="goBack" class="button goBackButton"> -->
+      </div>
+    </div>
+  </div>
+  <main>
+    <div id="root" class="body-img contenedorRoot"></div>
+  </main>
+  <div id="filtersTypeofPlayer" class="hidden">
+    <select name="list" id="type">
+      <option value="" disable selected>TIPO DE CAMPEÓN</option>
+      <option value="Fighter">Luchador</option>
+      <option value="Tank">Tanque</option>
+      <option value="Mage">Mágico</option>
+      <option value="Assassin">Asesino</option>
+      <option value="Support">Soporte</option>
+      <option value="Marksman">Tirador</option>
+    </select>
+    <select name="list" id="powers">
+      <option value="" disable selected>PODEROSO</option>
+      <option value="falling">Mayor a menor</option>
+      <option value="upward">Menor a Mayor</option>
+    </select>
+    <select name="list" id="utility">
+      <option value="" disable selected>UTILIDAD</option>
+      <option value="falling">Mayor a menor</option>
+      <option value="upward">Menor a Mayor</option>
+    </select>
+    <select name="list" id="weakness">
+      <option value="" disable selected>DEBILIDAD</option>
+      <option value="falling">Mayor a menor</option>
+      <option value="upward">Menor a Mayor</option>
+    </select>
+    <button type="button" id="filtersType" value="Filtrar">Filtrar</button>
+    <button type="button" id="goBack" value="Volver">Volver</button>
+  </div>
+  <div id="miModal" class="miModal hidden">
+    <div id="caracteristicas"></div>
+  </div>
+  <footer>@create by Natalia Lino and Alexandra</footer>
+  <script type="module" src="main.js"></script>
+</body>
+
 </html>
