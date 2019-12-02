@@ -20,6 +20,10 @@ const root = document.querySelector('#root');
 // const miModal = document.querySelector('#miModal');
 const lolData = Object.values(LoL.data);
 const newData = seeToChampion(lolData);
+console.log('que es lolData', lolData);
+console.log('que es lolData', typeof(lolData));
+console.log('lolData', Array.isArray(lolData));
+console.log('newData', Array.isArray(newData));
 
 const roamData = (toShowFigure) => {
   let valuesPlayer = '';
